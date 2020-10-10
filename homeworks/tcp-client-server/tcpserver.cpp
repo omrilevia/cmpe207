@@ -59,22 +59,22 @@ int main(){
     // close listening socket
     closesocket(listening) ;
     // while loop: accept and echo message back to client
-    char buf[4096] ;
+    char buf[4096] = "hello!";
     while(true){
-        ZeroMemory(buf, 4096) ;
-        // wait for client to send data
-        int bytesReceived = recv(clientSocket, buf, 4096, 0) ;
-        if(bytesReceived == SOCKET_ERROR){
-            cout << "error in recv()" << endl;
-            return 1 ;
-        }
-        if(bytesReceived == 0){
-            cout << "Client disconnected" << endl;
-            break ;
-        }
+        // ZeroMemory(buf, 4096) ;
+        // // wait for client to send data
+        // int bytesReceived = recv(clientSocket, buf, 4096, 0) ;
+        // if(bytesReceived == SOCKET_ERROR){
+        //     cout << "error in recv()" << endl;
+        //     return 1 ;
+        // }
+        // if(bytesReceived == 0){
+        //     cout << "Client disconnected" << endl;
+        //     break ;
+        // }
 
         // echo message back to client
-        send(clientSocket, buf, bytesReceived + 1, 0) ;
+        send(clientSocket, buf, 4096, 0) ;
 
         
     }
