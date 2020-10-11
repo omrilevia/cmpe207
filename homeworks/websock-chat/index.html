@@ -57,7 +57,12 @@
 
       socket.on('user joined', (data)=>{
           console.log(data.username + 'joined');
-          $('#messages').append($('<li>').text(data.username + ' joined the chat'));
+          $('#messages').append($('<li>').text(data.username + ' joined the chat, ' + data.numUsers + ' users in the chat'));
+      });
+
+      socket.on('discon', (data)=>{
+          console.log('user disconnected') ;
+          $('#messages').append($('<li>').text('someone left the chat, ' + data.numUsers + ' users in the chat'));
       });
 
   </script>

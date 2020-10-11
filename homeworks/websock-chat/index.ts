@@ -24,6 +24,13 @@ io.on('connection', (socket) => {
         });
     });
 
+    socket.on('disconnect', ()=>{
+        --numUsers;
+        socket.broadcast.emit('discon', {
+            numUsers: numUsers
+        }) ;
+    });
+
   });
 
 
