@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import ReactHLS from 'react-hls';
 import config from 'react-global-configuration';
+import StreamInfo from './StreamInfo';
+import TipContainer from './TipContainer'; 
 
 class VideoContainer extends Component {
 
   source() {
-    return `http://${config.get('serverIp')}:8935/stream/ab14b499.m3u8`
+    return `http://${config.get('serverIp')}:8935/stream/${this.props.streamId}.m3u8`
   }
 
   render() {
@@ -14,7 +16,8 @@ class VideoContainer extends Component {
         <div className="video-container">
           <ReactHLS url={this.source()} />
         </div>
-        
+        <TipContainer />
+        <StreamInfo streamId={this.props.streamId}/>
       </div>
     )
   }

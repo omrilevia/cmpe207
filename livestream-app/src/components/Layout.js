@@ -88,7 +88,7 @@ export default class Layout extends Component {
 			  </div>
 			</div>
 			<div className="main-body-container">
-			  <VideoContainer streamId='7eb60701'
+			  <VideoContainer streamId='ce66bb96'
 				connectedUsers={this.state.connectedUsers}
 			  />
 			  <div className="chat-container">
