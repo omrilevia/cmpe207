@@ -20,14 +20,6 @@ html,body,#root{margin:0;padding:0;font-family:sans-serif;height:100%}input,text
     height: inherit;
   }
   
-  .tip-button:hover {
-    /*background-image: url('images/1_pay_mm_over.png');*/
-  }
-  
-  .tip-button:active {
-    /*background-image: url('images/1_pay_mm_off.png');*/
-  }
-  
   .body-container {
     height: 84%;
   }
