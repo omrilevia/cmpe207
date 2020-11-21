@@ -1,19 +1,9 @@
-##ReactJS and Socket.io Chat App Tutorial
+## Livestream app built from react project
 
+This project was built using a livepeer end to end tutorial found here by users Blake Johnson and Leon Watson: 
+https://github.com/livepeer/Broadcaster-Chat-App#livepeer-chat-application
 
-This is the code from a tutorial done on youtube [here](https://www.youtube.com/playlist?list=PLfUtdEcvGHFHdOYFXj4cY6ZIFkSp6MOuY).
-
-###Getting Started
-
-First you'll need to fork or download the respository.
-
-Then in terminal you'll install the node modules
-
-``` npm install ```
-
-Then you can run it using 
-
-``` npm run react ``` to start React dev server.
-``` npm run server ``` to start NodeJS Socket.io server.
-
-
+### Additions include
+- Connection to a mongodb cluster
+- Front end forms to allow for submission of a livepeer node to add to the media player
+- Dynmamic setting of HLS player source upon stream selection 
